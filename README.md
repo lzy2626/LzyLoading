@@ -9,7 +9,9 @@
 ### 使 用
 
 [![](https://jitpack.io/v/lzy2626/LzyLoading.svg)](https://jitpack.io/#lzy2626/LzyLoading)
+
 To get a Git project into your build:
+
 **Step 1.** Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
 
@@ -30,7 +32,7 @@ Add it in your root build.gradle at the end of repositories:
 	}
 
 ```
-**Step 2.**代码调用
+**Step3.** 代码调用
 
 ```
        new LoadingDialog.Builder(MainActivity.this)
