@@ -52,8 +52,17 @@ public class LoadingDialog {
      */
     private int background;
 
+    /**
+     * image图片
+     */
     private int image;
+    /**
+     * gif图片
+     */
     private int gifImage;
+    /**
+     *宽高
+     */
     private int width;
     private int height;
 
