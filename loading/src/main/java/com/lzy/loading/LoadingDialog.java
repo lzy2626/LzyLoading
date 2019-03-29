@@ -66,6 +66,8 @@ public class LoadingDialog {
     private int width;
     private int height;
 
+    private Context context;
+
     /**
      * 加载数据对话框
      */
@@ -76,11 +78,13 @@ public class LoadingDialog {
         msgColor = builder.msgColor;
         cancelable = builder.cancelable;
         canceledOnTouchOutside = builder.canceledOnTouchOutside;
+        color = builder.color;
         background = builder.background;
         image = builder.image;
         gifImage = builder.gifImage;
         width = builder.width;
         height = builder.height;
+        context = builder.mContext;
     }
 
 
@@ -91,7 +95,7 @@ public class LoadingDialog {
      * gif无数据，自定义有数据，显示自定义图片
      * gif无数据，自定义无数据，显示系统样式
      */
-    public Dialog showDialogForLoading(Activity context) {
+    public Dialog showDialogForLoading() {
         View view;
         if (gifImage != -1) {//设置了gif
             view = LayoutInflater.from(context).inflate(R.layout.dialog_loadinggif, null);

@@ -17,6 +17,6 @@ public class MainActivity extends AppCompatActivity {
                 .image(R.drawable.loading_dialog_progressbar)
                 .gifImage(com.lzy.loading.R.mipmap.num86)
                 .build()
-                .showDialogForLoading(MainActivity.this).show();
+                .showDialogForLoading().show();
     }
 }
