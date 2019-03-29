@@ -4,10 +4,11 @@
 ]([https://github.com/lzy2626/LzyLoading](https://github.com/lzy2626/LzyLoading)
 )
 ### 效果
-、![设置了gif图显示](https://upload-images.jianshu.io/upload_images/11207183-a8362ab381642280.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/300)
+![设置了gif图显示](https://upload-images.jianshu.io/upload_images/11207183-a8362ab381642280.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/300)
 
-、
-###使 用[![](https://jitpack.io/v/lzy2626/LzyLoading.svg)](https://jitpack.io/#lzy2626/LzyLoading)
+### 使 用
+
+[![](https://jitpack.io/v/lzy2626/LzyLoading.svg)](https://jitpack.io/#lzy2626/LzyLoading)
 To get a Git project into your build:
 **Step 1.** Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
@@ -41,7 +42,7 @@ Add it in your root build.gradle at the end of repositories:
                 .showDialogForLoading(MainActivity.this).show();
 ```
 
-###实现
+### 实现
 **1.核心代码**
 ```
   /**
