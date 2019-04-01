@@ -1,18 +1,14 @@
 package com.lzy.loading;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.text.TextUtils;
-import android.util.DisplayMetrics;
 import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -95,7 +91,7 @@ public class LoadingDialog {
      * gif无数据，自定义有数据，显示自定义图片
      * gif无数据，自定义无数据，显示系统样式
      */
-    public Dialog showDialogForLoading() {
+    public void show() {
         View view;
         if (gifImage != -1) {//设置了gif
             view = LayoutInflater.from(context).inflate(R.layout.dialog_loadinggif, null);
@@ -156,7 +152,6 @@ public class LoadingDialog {
         window.setAttributes(params);
 
         mLoadingDialog.show();
-        return mLoadingDialog;
     }
 
     /**
