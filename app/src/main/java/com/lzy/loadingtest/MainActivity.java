@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
                 .msg("加载中...")
                 .color(R.color.colorPrimary)
                 .image(R.drawable.loading_dialog_progressbar)
-                .gifImage(com.lzy.loading.R.mipmap.num86)
+                .gifImage(R.mipmap.num86)
                 .build()
-                .showDialogForLoading().show();
+                .show();
     }
 }
