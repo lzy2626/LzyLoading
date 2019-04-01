@@ -28,7 +28,7 @@ Add it in your root build.gradle at the end of repositories:
 
 ```
 	dependencies {
-	        implementation 'com.github.lzy2626:LzyLoading:v1.0'
+	        implementation 'com.github.lzy2626:LzyLoading:1.2'
 	}
 
 ```
@@ -41,7 +41,7 @@ Add it in your root build.gradle at the end of repositories:
                 .image(R.drawable.loading_dialog_progressbar)
                 .gifImage(com.lzy.loading.R.mipmap.num86)
                 .build()
-                .showDialogForLoading(MainActivity.this).show();
+                .show();
 ```
 
 ### 实现
@@ -54,7 +54,7 @@ Add it in your root build.gradle at the end of repositories:
      * gif无数据，自定义有数据，显示自定义图片
      * gif无数据，自定义无数据，显示系统样式
      */
-    public Dialog showDialogForLoading(Activity context) {
+    public void show() {
         View view;
         if (gifImage != -1) {//设置了gif
             view = LayoutInflater.from(context).inflate(R.layout.dialog_loadinggif, null);
@@ -115,7 +115,6 @@ Add it in your root build.gradle at the end of repositories:
         window.setAttributes(params);
 
         mLoadingDialog.show();
-        return mLoadingDialog;
     }
 
 ```
