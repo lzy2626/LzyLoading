@@ -28,18 +28,43 @@ Add it in your root build.gradle at the end of repositories:
 
 ```
 	dependencies {
-	        implementation 'com.github.lzy2626:LzyLoading:1.2'
+	        implementation 'com.github.lzy2626:LzyLoading:1.4'
 	}
 
 ```
 **Step3.** 代码调用
 
+1.使用系统默认图，可以修改颜色
+
 ```
        new LoadingDialog.Builder(MainActivity.this)
                 .msg("加载中...")
-                .color(R.color.colorPrimary)
+                .color(R.color.colorPrimary)//修改颜色
+                .build()
+                .show();
+```
+2.自定义图片
+```
+       new LoadingDialog.Builder(MainActivity.this)
+                .msg("加载中...")
                 .image(R.drawable.loading_dialog_progressbar)
-                .gifImage(com.lzy.loading.R.mipmap.num86)
+                .build()
+                .show();
+```
+loading_dialog_progressbar写法：
+```
+		
+<?xml version="1.0" encoding="utf-8"?>
+<animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@mipmap/bga_refresh_loading01"
+    android:pivotX="50%"
+    android:pivotY="50%" />
+```
+3.gif图
+```
+       new LoadingDialog.Builder(MainActivity.this)
+                .msg("加载中...")
+                .gifImage(R.mipmap.num86)
                 .build()
                 .show();
 ```
