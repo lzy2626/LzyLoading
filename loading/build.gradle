@@ -35,5 +35,6 @@ dependencies {
     api 'pl.droidsonroids.gif:android-gif-drawable:1.2.16'
 
 
-    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    api 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.google.code.gson:gson:2.8.0'
 }
