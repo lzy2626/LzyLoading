@@ -1,10 +1,12 @@
 
 ### 前言
- 将等待加载框进行集成，可以根据不同的需求，显示不同的等待加载框。Github地址：[[https://github.com/lzy2626/LzyLoading](https://github.com/lzy2626/LzyLoading)
-]([https://github.com/lzy2626/LzyLoading](https://github.com/lzy2626/LzyLoading)
-)
+ 将等待加载框进行集成，可以根据不同的需求，显示不同的等待加载框。Github地址：
+ [https://github.com/lzy2626/LzyLoading](https://github.com/lzy2626/LzyLoading)
+
+
 ### 效果
-![设置了gif图显示](https://upload-images.jianshu.io/upload_images/11207183-a8362ab381642280.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/300)
+![](https://upload-images.jianshu.io/upload_images/11207183-23fe7171e0a42614.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/300)
+
 
 ### 使 用
 
@@ -12,7 +14,7 @@
 
 To get a Git project into your build:
 
-**Step 1.** Add the JitPack repository to your build file
+**Step 1. Add the JitPack repository to your build file**
 Add it in your root build.gradle at the end of repositories:
 
 ```
@@ -24,17 +26,17 @@ Add it in your root build.gradle at the end of repositories:
 	}
 ```
 
-**Step 2.** Add the dependency
+**Step 2. Add the dependency**
 
 ```
 	dependencies {
-	        implementation 'com.github.lzy2626:LzyLoading:1.4'
+	        implementation 'com.github.lzy2626:LzyLoading:1.9'
 	}
 
 ```
-**Step3.** 代码调用
+**Step3. 代码调用**
 
-1.使用系统默认图，可以修改颜色
+***1.使用系统默认图，可以修改颜色***
 
 ```
        new LoadingDialog.Builder(MainActivity.this)
@@ -43,7 +45,7 @@ Add it in your root build.gradle at the end of repositories:
                 .build()
                 .show();
 ```
-2.自定义图片
+***2.自定义图片***
 ```
        new LoadingDialog.Builder(MainActivity.this)
                 .msg("加载中...")
@@ -60,7 +62,7 @@ loading_dialog_progressbar写法：
     android:pivotX="50%"
     android:pivotY="50%" />
 ```
-3.gif图
+***3.gif图***
 ```
        new LoadingDialog.Builder(MainActivity.this)
                 .msg("加载中...")
