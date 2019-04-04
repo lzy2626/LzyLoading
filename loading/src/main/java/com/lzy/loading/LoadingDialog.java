@@ -81,6 +81,11 @@ public class LoadingDialog {
         width = builder.width;
         height = builder.height;
         context = builder.mContext;
+        init();
+    }
+
+    private void init() {
+        mLoadingDialog = new Dialog(context, R.style.CustomProgressDialog);
     }
 
 
@@ -140,7 +145,6 @@ public class LoadingDialog {
                 loadingText.setTextColor(context.getResources().getColor(msgColor));
         }
 
-        mLoadingDialog = new Dialog(context, R.style.CustomProgressDialog);
         mLoadingDialog.setCancelable(cancelable);
         mLoadingDialog.setCanceledOnTouchOutside(canceledOnTouchOutside);
         mLoadingDialog.setContentView(view, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
@@ -164,7 +168,7 @@ public class LoadingDialog {
     }
 
     public boolean isShowing() {
-        return mLoadingDialog.isShowing();
+        return mLoadingDialog != null ? mLoadingDialog.isShowing() : false;
     }
 
     public static final class Builder {
