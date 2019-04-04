@@ -57,7 +57,7 @@ public class LoadingDialog {
      */
     private int gifImage;
     /**
-     *宽高
+     * 宽高
      */
     private int width;
     private int height;
@@ -157,10 +157,14 @@ public class LoadingDialog {
     /**
      * 关闭加载对话框
      */
-    public void cancelDialogForLoading() {
+    public void dismiss() {
         if (mLoadingDialog != null) {
             mLoadingDialog.cancel();
         }
+    }
+
+    public boolean isShowing() {
+        return mLoadingDialog.isShowing();
     }
 
     public static final class Builder {
